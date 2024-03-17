@@ -1,0 +1,22 @@
+PS D:\Package Assignment App> flask db init
+Creating directory 'D:\\Package Assignment App\\migrations' ...  done
+Creating directory 'D:\\Package Assignment App\\migrations\\versions' ...  done
+Generating D:\Package Assignment App\migrations\alembic.ini ...  done
+Generating D:\Package Assignment App\migrations\env.py ...  done
+Generating D:\Package Assignment App\migrations\README ...  done
+Generating D:\Package Assignment App\migrations\script.py.mako ...  done
+Please edit configuration/connection/logging settings in 'D:\\Package Assignment App\\migrations\\alembic.ini' before proceeding.
+
+
+PS D:\Package Assignment App> flask db migrate -m "First Migration"
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.autogenerate.compare] Detected added table 'packages'
+INFO  [alembic.autogenerate.compare] Detected added table 'customers'
+Generating D:\Package Assignment App\migrations\versions\b6680d2f2ff1_first_migration.py ...  done
+
+
+PS D:\Package Assignment App> flask db upgrade
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> b6680d2f2ff1, First Migration

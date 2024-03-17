@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Here is a list of packages:</h1>
+  <ul>
+    {% for package in packages  %}
+    <li>{{package}}</li>
+    {% endfor %}
+  </ul>
+
+</div>
+{% endblock %}
