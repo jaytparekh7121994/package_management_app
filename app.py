@@ -6,11 +6,9 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 from forms import AddCustomerForm, AddPackageForm, DeletePackageForm, AssignCustomerForm, DeleteCustomerForm
 
 app = Flask(__name__)
-# Required for redirects to work in the preview window that's integrated in the lab IDE
 app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 # Key for Forms
 app.config['SECRET_KEY'] = 'mysecretkey'
-# Required for cookies to work in the preview window that's integrated in the lab IDE
 app.config['SESSION_COOKIE_SAMESITE'] = 'None'
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SECURE'] = True
